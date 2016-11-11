@@ -1,15 +1,103 @@
 a {
-	color: #BA209B;
+	color: black;
+	font-weight: $light;
 	text-decoration: none;
 	&:hover {
-		color: #D424B1;
+		color: $yellow;
 	}
 }
 
 /* paragraphs */
 
+body {
+	font-family: $font;
+}
+
 p {
-	line-height: 1.5;
+	font-weight: $light;
+	font-size: 0.9rem;
+	line-height: 1.6rem;
+	margin: 0;
+	padding: 0;
+	margin-bottom: 0.9rem;
+
+	a {
+		text-decoration: underline;
+	}
+}
+
+strong {
+	font-weight: $bold;
+}
+
+h1, h2 {
+	font-weight: $thin;
+	margin: 0 0 10px 0;
+	padding: 0;
+	font-size: 3rem;
+	line-height: 3.2rem;
+}
+
+h2 {
+	position: relative;
+	margin-top: 80px;
+
+	&:before {
+		content: '';
+		width: 100px;
+		height: 2px; 
+		background: $yellow;
+		position: absolute;
+		left: 0;
+		top: -35px;
+
+	}
+}
+
+h3 {
+	font-weight: $light;
+	margin: 0;
+	padding: 0;
+	font-size: 0.8rem;
+	line-height: 1.2rem;
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+	margin-right: 10px;
+
+	a {
+		background: black;
+		padding: 10px;
+		color: white;
+		text-transform: none;
+		letter-spacing: 0.5px;
+		transition: 0.2s;
+		display: inline-block;
+		margin-top: 10px;
+
+		&:hover, &:focus {
+			background: $yellow;
+			color: black;
+			opacity: 1;
+		}
+	}
+}
+
+.links {
+	display: flex;
+}
+
+h4 {
+	font-weight: $thin;
+	font-size: 2.2rem;
+	line-height: 2.2rem;
+	margin: 0 0 20px 0;
+	padding: 0;
+}
+
+h6 {
+	font-weight: $light;
+	margin: 0; 
+	padding: 0;
 }
 
 /*blockquotes*/

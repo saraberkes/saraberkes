@@ -1,6 +1,11 @@
 <footer>
   <div class="container">
-    <p>&copy; HackerYou <?php echo date('Y'); ?></p>
+  <?php wp_nav_menu( array(
+      'container' => false,
+      'theme_location' => 'social'
+    )); ?>
+
+    <h6>&copy; <?php echo date('Y'); ?> Sara Berkes. Designed in Sketch & Developed on WordPress</h6>
   </div>
 </footer>
 
@@ -12,6 +17,8 @@
  g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
  s.parentNode.insertBefore(g,s)}(document,"script"));
 </script>
+<script src="https://use.typekit.net/rar5uzi.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
 
 <?php wp_footer(); ?>
 </body>

@@ -29,6 +29,10 @@ function theme_setup() {
 		'primary' => 'Primary Navigation'
 	) );
 
+	register_nav_menus( array(
+		'social' => 'Social Navigation'
+	) );
+
 	/*
 	 * Switch default core markup for search form, comment form, and comments
 	 * to output valid HTML5.
@@ -51,6 +55,10 @@ function hackeryou_styles(){
 	wp_enqueue_style('style', get_stylesheet_uri() );
 
 	wp_enqueue_style('fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
+
+	wp_enqueue_style('devicons', 'http://cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css');
+
+	wp_enqueue_style('devicon', 'https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css');
 }
 
 add_action( 'wp_enqueue_scripts', 'hackeryou_styles');
@@ -84,6 +92,22 @@ function hackeryou_scripts() {
     array( 'jquery', 'plugins' ), //dependencies
     null, // version number
     true //load in footer
+  );
+
+  wp_enqueue_script(
+  	'waypoints', //handle
+  	'https' . "://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js",
+  	false, //dependencies
+  	null, //version number
+  	true //load in footer
+  );
+
+  wp_enqueue_script(
+  	'smoothscroll', //handle
+  	'https' . "://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.0.0/jquery.smooth-scroll.min.js",
+  	false, //dependencies
+  	null, //version number
+  	true //load in footer
   );
 }
 
@@ -280,4 +304,10 @@ function get_post_parent($post) {
 	else {
 		return $post->ID;
 	}
+}
+
+if( function_exists('acf_add_options_page') ) {
+
+	acf_add_options_page();
+	
 }

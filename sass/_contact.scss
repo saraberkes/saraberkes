@@ -1,0 +1,96 @@
+form {
+
+		input[type=text], input[type=email], textarea {
+		border: 1px solid black;
+		outline: none;
+		padding: 10px;
+		width: 100%;
+		color: black;
+		font-style: italic;
+		font-weight: $light;
+
+		&::-webkit-input-placeholder {
+		   color: black;
+		   font-style: italic;
+		   font-family: $font;
+		   font-weight: $light;
+		}
+
+		&:-moz-placeholder { /* Firefox 18- */
+		   color: black;
+		   font-style: italic;
+		   font-family: $font;
+		   font-weight: $light; 
+		}
+
+		&::-moz-placeholder {  /* Firefox 19+ */
+		   color: black;
+		   font-style: italic;
+		   font-family: $font;
+		   font-weight: $light;
+		}
+
+		&:-ms-input-placeholder {  
+		   color: black;
+		   font-style: italic;
+		   font-family: $font;
+		   font-weight: $light;
+		}
+	}
+
+	 label { //positioned off screen so screen readers can see but eyes can't
+		position: absolute;
+		left: -100000px;
+		top: auto;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+	}
+
+	p {
+		margin-bottom: -15px;
+	}
+
+	input[type=submit] {
+		margin-top: 30px;
+		outline: none;
+		border: none;
+		font-family: $font;
+		font-weight: $light;
+		font-size: 0.8rem;
+		background: black;
+		padding: 10px 30px;
+		color: white;
+		letter-spacing: 0.5px;
+		transition: 0.2s;
+
+		&:hover, &:focus {
+			background: $yellow;
+			color: black;
+			opacity: 1;
+		}
+
+	}
+
+	div.wpcf7-mail-sent-ok, div.wpcf7-validation-errors, span.wpcf7-not-valid-tip  {
+		border: none;
+		font-family: $font;
+		font-weight: $light;
+		font-size: 0.8rem;
+	}
+}
+
+.contactInfo {
+	display: flex;
+	justify-content: space-between;
+}
+
+.contactForm {
+	width: 50%;
+	margin-top: 10px;
+}
+
+.contactText {
+	width: 45%;
+	margin-top: 30px;
+}

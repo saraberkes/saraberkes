@@ -1,0 +1,29 @@
+.error {
+	text-align: center;
+	margin: 0 auto;
+
+	.links {
+		justify-content: center;
+		margin-bottom: 50px;
+
+		h3 {
+			margin-right: 0;
+		}
+
+		a {
+			margin-right: 10px;
+		}
+
+		&:last-child {
+			a {
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+.errorHeader {
+	.menuWrapper {
+		display: none;
+	}
+}

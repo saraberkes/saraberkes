@@ -1,0 +1,40 @@
+.portfolioProject {
+	h2 {
+		margin-bottom: 30px;
+	}
+
+	.description {
+		margin-bottom: 20px;
+
+		p {
+			text-align: justify;
+		}
+	}
+
+	.link {
+		margin-bottom: 40px;
+	}
+
+	.projectImageGrid {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.projectImages {
+		max-width: 49.5%;
+		height: 250px;
+		overflow: hidden;
+		margin-right: 1%;
+		margin-bottom: 1%;
+
+		&:nth-child(2n) {
+			margin-right: 0;
+		}
+
+		img {
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+}

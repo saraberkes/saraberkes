@@ -1,0 +1,75 @@
+@media (max-width: 1000px) {
+
+//the navigation
+	.menuWrapper {
+		position: static;
+		width: 100%;
+		margin: 0 auto;
+
+		.primaryMenu {
+			position: fixed;
+			top: 0;
+			left: 0;
+			padding: 40px 20px 20px 40px;
+			background: white;
+			z-index: 1;
+
+			a {
+				font-size: 0.9rem;
+			}
+			// top: 23vh;
+
+			#menuIcon {
+				cursor: pointer;
+				z-index: 10;
+			}
+
+			.menufixed {
+				position: fixed;
+				transform: rotate(0deg);
+				top: 0;
+				left: 0;
+				padding: 20px;
+
+				ul#menu-primary-menu {
+					margin: 0;
+					padding: 0;
+					transform: rotate(0deg);
+					display: flex;
+					flex-direction: column-reverse;
+					
+					li {
+						display: block;
+						padding: 25px 0;
+						padding-left: 50px;
+						
+						a {
+							color: inherit;
+							padding: 2px;
+							font-size: 0.9rem;
+
+							&:hover, &:focus {
+								border-bottom: 1.5px solid $yellow;
+
+							}
+						}
+					}
+				}
+
+			}
+		}
+	}
+
+	.menufixed {
+		display: none;
+	}
+
+	.showMenu {
+		display: block;
+	}
+	
+	//the content
+	.container {
+		width: 90%;
+	}
+}

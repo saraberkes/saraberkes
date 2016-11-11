@@ -1,50 +1,69 @@
 /*!
-* Theme Name: HackerYou Starter Theme
-* Theme URI: http://hackeryou.com;
-* Description: Starter theme for building any website. Created by HackerYou. * Rename this to your own theme page.
+* Theme Name: Sara Berkes 
+* Theme URI: https://saraberkes.com
+* Description: Theme for Sara Berkes website. Created by Sara Berkes on the HackerYou starter theme.
 * Version: 1.0
 * Author: HackerYou
-* Author URI: http://hackeryou.com
+* Author URI: http://saraberkes.com
 */
 
 @import 'normalize';
+@import 'variables';
 @import 'typography';
 @import 'navigation';
+@import 'home';
+@import 'about';
+@import 'portfolio';
+@import 'single-portfolio';
+@import 'contact';
+@import 'error';
 @import 'sidebar';
 @import 'comments';
 @import 'footer';
+@import 'queries';
 /*
 ====================================
 Default Styling
 ====================================
 */
 
+html {
+	font-size: 16px;
+}
+
 img {
 	max-width: 100%;
 }
 
-body {
-	color: #333;
-}
-
 .container {
-	max-width: 1200px;
+	max-width: 1100px;
 	margin: 0 auto;
 }
 
 .content {
-	float: left;
-	width: 65%;
-	margin-right: 5%;
+	max-width: 800px;
+	width: 90%;
+	margin: 0 auto;
+
+	.contentItems {
+		width: 100%;
+	}
 }
 
 .full {
 	width: 100%;
 }
 
+#about {
 
+}
 
+#portfolio, #contact, .skills {
+	padding-top: 50px;
+}
 
+.pageContent {
+}
 
 
 
