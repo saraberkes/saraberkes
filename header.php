@@ -14,7 +14,6 @@
 <body <?php body_class(); ?>>
 
 <header>
-<div id="about"></div>
 
 <div class="logo">
   <?php 
@@ -22,24 +21,6 @@
      $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
         ?>
   <a href="<?php echo home_url(); ?>"><img src="<?php echo $image[0]; ?>" alt=""></a>
-</div>
-
-<div class="content">
-<div class="menuWrapper">
-  <div class="primaryMenu">
-  <div id="menuIcon">
-    <a href="#" id="menu-item">
-      <i class="fa fa-bars" aria-hidden="true"></i>
-    </a>
-  </div>
-    <div class="menufixed" id="menufixed">
-        <?php wp_nav_menu( array(
-          'container' => false,
-          'theme_location' => 'primary'
-        )); ?>
-      </div>
-    </div>
-  </div>
 </div>
 </header><!--/.header-->
 

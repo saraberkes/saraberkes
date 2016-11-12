@@ -1,4 +1,21 @@
 <?php get_header();  ?>
+<div class="content">
+<div class="menuWrapper">
+  <div class="primaryMenu">
+  <div id="menuIcon" class="fa fa-bars fa-2x">
+    <a href="#" id="menu-item">
+    </a>
+  </div>
+    <div class="menufixed" id="menufixed">
+        <?php wp_nav_menu( array(
+          'container' => false,
+          'theme_location' => 'primary'
+        )); ?>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="about"></div>
 
 <div class="main">
   <div class="container">

@@ -1,5 +1,13 @@
+.aboutMobile {
+	display: none;
+}
+
 .about {
 	padding-top: 30px;
+
+	p {
+		text-align: justify;
+	}
 }
 
 .skillsItems {
@@ -8,9 +16,20 @@
 	justify-content: space-between;
 }
 
+.skills {
+	h2 {
+		margin-top: 80px;
+	}
+
+	h3 {
+		margin-right: 0;
+		font-size: 0.8rem;
+	}
+}
+
 .skill {
 	text-align: center;
-	width: 115px;
+	width: 15%;
 	margin: 40px 0;
 
 	.skillIcon {

@@ -14,7 +14,7 @@
 
 	.primaryMenu {
 		position: absolute;
-		top: 23vh;
+		top: 18vh;
 		left: -35%;
 
 		.menufixed {
@@ -23,7 +23,7 @@
 			background: white;
 			padding: 20px;
 
-			ul#menu-primary-menu {
+			ul#menu-primary-menu, ul#menu-single-page-nav {
 				margin: 0;
 				padding: 0;
 				// transform: rotate(-90deg);

@@ -1,4 +1,20 @@
 <?php get_header(); ?>
+<div class="content">
+<div class="menuWrapper">
+  <div class="primaryMenu">
+  <div id="menuIcon" class="fa fa-bars">
+    <a href="#" id="menu-item">
+    </a>
+  </div>
+    <div class="menufixed" id="menufixed">
+        <?php wp_nav_menu( array(
+          'container' => false,
+          'theme_location' => 'singlepage'
+        )); ?>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="main">
 	<div class="container">
@@ -16,10 +32,17 @@
 				<?php if( get_field('has_live_site') )
 				{ ?>
 					<?php $link = get_field('live_site_link') ?>
-					<div class="link">
-						<h3><a href="<?php echo $link?>" target="_blank">View Live</a><h3>
-					</div>
 				<?php } ?>
+
+				<?php if(get_field('on_github'))
+				{ ?>
+				<?php $github = get_field('github_link') ?>
+				<?php } ?>
+
+				<div class="links">
+					<h3><a href="<?php echo $link?>" target="_blank">View Live</a><h3>
+					<h3><a href="<?php echo $github ?>" target="_blank">View on Github</a></h3>
+				</div>
 				
 				<div class="projectImageGrid">
 					<?php while ( have_rows('project_images')) : the_row(); ?>

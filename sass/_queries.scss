@@ -1,4 +1,4 @@
-@media (max-width: 1000px) {
+@media (max-width: 1050px) {
 
 //the navigation
 	.menuWrapper {
@@ -13,6 +13,7 @@
 			padding: 40px 20px 20px 40px;
 			background: white;
 			z-index: 1;
+			text-align: center;
 
 			a {
 				font-size: 0.9rem;
@@ -21,7 +22,10 @@
 
 			#menuIcon {
 				cursor: pointer;
-				z-index: 10;
+				position: relative;
+				z-index: 10000;
+				padding-left: 20px;
+				font-size: 1rem;
 			}
 
 			.menufixed {
@@ -29,9 +33,10 @@
 				transform: rotate(0deg);
 				top: 0;
 				left: 0;
-				padding: 20px;
+				padding: 30px;
+				// opacity: 0.5;
 
-				ul#menu-primary-menu {
+				ul#menu-primary-menu, ul#menu-single-page-nav {
 					margin: 0;
 					padding: 0;
 					transform: rotate(0deg);
@@ -73,3 +78,344 @@
 		width: 90%;
 	}
 }
+
+@media (max-width:970px) {
+
+	.portfolioProject {
+		
+		.projectImages {
+			flex: 1 0 280px;
+			height: 250px;
+			margin-bottom: 10px;
+
+			img {
+				height: 100%;
+			}
+			}
+		}
+}
+
+
+@media (max-width:860px) {
+
+	.heroSection {
+		height: 400px;
+		margin-bottom: 125px;
+	}
+
+	.aboutMobile {
+		display: block;
+		margin-top: 50px;
+
+		p {
+			text-align: justify;
+		}
+
+		h2 {
+			margin-bottom: 30px;
+		}
+	}
+
+	.about {
+		display: none;
+	}
+
+	.heroText {
+		display: none;
+	}
+
+
+	.skillsItems {
+		
+		h3 {
+			font-size: 0.6rem;
+		}
+
+		.skill {
+			width: calc(15% - 10px);
+			margin-right: 10px;
+		}
+	}
+}
+
+
+@media (max-width:760px) {
+
+	.heroSection {
+		height: 350px;
+	}
+
+	.portfolioContent {
+
+		h2 {
+			margin: 50px 0;
+		}
+	}
+
+	.portfolioPiece {
+		display: block;
+		margin-bottom: 50px;
+	}
+
+	.portfolioText {
+		width: 100%;
+		display: block;
+		justify-content: center;
+		margin: 0;
+		padding-left: 30px;
+	}
+
+	.portfolioImage {
+		width: 100%;
+		height: 400px;
+		text-align: center;
+		overflow: hidden;
+		margin-bottom: 30px;
+
+		img {
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+
+	.contactInfo {
+		flex-direction: column-reverse;
+	}
+
+	.contactForm, .contactText {
+		width: 100%;
+	}
+}
+
+.portfolioProject {
+
+	.description {
+
+		p {
+			text-align: left;
+		}
+	}
+
+	.projectImageGrid {
+		display: block;
+	}
+	
+	.projectImages {
+		width: 100%;
+		height: 100%;
+
+		img {
+			height: 100%;
+			width: 100%;
+		}
+		}
+	}
+
+@media (max-width:650px) {
+
+.aboutMobile {
+	
+	p {
+		text-align: left;
+	}
+}
+
+	.heroSection {
+		height: 250px;
+	}
+
+	.skills {
+		h2 {
+			margin-bottom: 40px;
+		}
+	}
+
+	.skillsItems {
+		
+		.skillIcon {
+			display: none;
+		}
+
+		.skill {
+			width: 40%;
+			margin: 0;
+			padding: 0;
+			margin-bottom: 5px;
+			text-align: left;
+		}
+	}
+}
+
+
+
+@media screen and (max-width:480px){
+
+	.container {
+		width: 97%;
+	}
+
+	.aboutMobile {
+		
+		p {
+			text-align: left;
+			font-size: 1.2rem;
+			line-height: 2rem;
+		}
+
+		.aboutMore {
+			display: none;
+		}
+	}
+	
+	h1, h2, {
+		font-size: 3.2rem;
+	}
+
+	h4 {
+		font-size: 2.8rem;
+		line-height: 3rem;
+	}
+
+	h3 {
+		font-size: 1rem;
+		line-height: 1.4rem;
+	}
+
+	p {
+		font-size: 1.2rem;
+		line-height: 2rem;
+	}
+
+	.skillsItems {
+		display: block;
+		width: 100%;
+
+		.skill {
+			width: 100%;
+
+			h3 {
+				font-size: 1rem;
+				margin-bottom: 1rem;
+				width: 100%;
+			}
+		}
+	}
+
+	.menuWrapper {
+		position: static;
+		width: 100%;
+		margin: 0 auto;
+
+		.primaryMenu {
+			position: fixed;
+			top: 0;
+			left: 0;
+			padding: 20px 20px 20px 0;
+			background: white;
+			z-index: 1;
+
+			#menuIcon {
+				font-size: 1.5rem;
+			}
+
+			.menufixed {
+				width: 100%;
+				height: 100vh;
+
+				ul#menu-primary-menu, #menu-single-page-nav {
+
+				li a {
+						font-size: 1.8rem;
+						font-weight: $thin;
+					}
+					
+				}
+			}
+
+		}
+	}
+
+//this removes the link margin from the nth-of-type selectors
+.portfolioContent {
+	width: 100%;
+	
+	section:nth-of-type(even) {
+			
+			.portfolioPiece {
+				
+				.portfolioText {
+					border: none;
+					margin: 0;
+					padding: 0;
+					text-align: left;
+					width: 100%;
+
+					h4 {
+						margin-bottom: 30px;
+					}
+
+					p {
+						margin-top: 20px;
+					}
+
+					h3 {
+						margin: 0;
+					}
+					
+					.links {
+						width: 100%;
+						padding-top: 20px;
+
+						h3 {
+							width: 100%;
+						}
+						
+						a {
+							width: 100%;
+							margin: 0 0 10px 0;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.portfolioText {
+		border: none;
+		margin: 0;
+		padding: 0;
+		text-align: left;
+
+		h4 {
+			margin-bottom: 30px;
+		}
+
+		p {
+			margin-top: 20px;
+		}
+	}
+
+	h3 {
+		margin: 0;
+		padding: 0;
+	}
+
+	
+	.links {
+		display: block;
+		padding-top: 20px;
+		width: 100%;
+
+			a {
+				width: 100%;
+				text-align: center;
+				margin: 0;
+				margin-bottom: 10px;
+			}
+	}
+}
+
+
+
+
+

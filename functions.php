@@ -33,6 +33,10 @@ function theme_setup() {
 		'social' => 'Social Navigation'
 	) );
 
+	register_nav_menus( array(
+		'singlepage' => 'Single Page'
+	));
+
 	/*
 	 * Switch default core markup for search form, comment form, and comments
 	 * to output valid HTML5.

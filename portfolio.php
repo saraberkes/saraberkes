@@ -7,7 +7,7 @@
 		<?php
 			$portfolioHome = new WP_Query(
 		array(
-			'posts_per_page' => -1,
+			'posts_per_page' => 5,
 			'post_type' => 'portfolio',
 			'order' => 'ASC'
 			)
@@ -44,6 +44,7 @@
 
 		<?php endwhile; ?>
 		<?php wp_reset_postdata(); ?>
+
 		</div>
 
 
