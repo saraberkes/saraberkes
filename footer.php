@@ -1,9 +1,9 @@
 <footer>
   <div class="container">
-  <?php wp_nav_menu( array(
+  <div class="socialMenu"><?php wp_nav_menu( array(
       'container' => false,
       'theme_location' => 'social'
-    )); ?>
+    )); ?></div>
 
     <h6>&copy; <?php echo date('Y'); ?> Sara Berkes. Designed in Sketch & Developed on WordPress</h6>
   </div>
