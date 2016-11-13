@@ -1,13 +1,12 @@
 <?php get_header();  ?>
 
 <div class="main">
-
-		<div class="content portfolioContent">
+		<div class="content portfolioContent" id="portfolio">
 		 <h2><?php the_field('portfolio_headline', 63) ?></h2>
 		<?php
 			$portfolioHome = new WP_Query(
 		array(
-			'posts_per_page' => 5,
+			'posts_per_page' => -1,
 			'post_type' => 'portfolio',
 			'order' => 'ASC'
 			)

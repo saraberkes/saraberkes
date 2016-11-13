@@ -2,7 +2,7 @@
 
 <div class="main">
   <div class="container">
-
+    <div id="contact"></div>
     <div class="content">
 
     <h2><?php the_field('contact_headline', 41) ?></h2>

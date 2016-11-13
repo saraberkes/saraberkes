@@ -7,38 +7,24 @@ $(function(){
 
 //waypoints for menu items (showing active state when scroll to particular section)
 
-if(window.location.href === 'front-page.php') {
-	var waypoint = new Waypoint({
-  element: document.getElementById('about'),
-  handler: function(direction) {
-    $('.aboutNav').addClass('selectedMenu');
-    $('.portfolioNav').removeClass('selectedMenu');
-    $('.contactNav').removeClass('selectedMenu');
-  },
-});
+$(window).on('scroll', function() {
+    var aboutTop = $('#about').offset().top;
+    var portfolioTop = $('#portfolioSection').offset().top;
+    var contactTop = $('#contactSection').offset().top;
 
-	var waypoint = new Waypoint({
-	 element: document.getElementById('portfolio'),
-	 handler: function(direction) {
-	 		console.log(direction);
-	   $('.portfolioNav').addClass('selectedMenu');
-	   $('.aboutNav').removeClass('selectedMenu');
-	   $('.contactNav').removeClass('selectedMenu');
-	 },
-	 offset: '-.01%'
-});
-
-	var waypoint = new Waypoint({
-  element: document.getElementById('contact'),
-  handler: function(direction) {
-    $('.contactNav').addClass('selectedMenu');
-    $(this).parent().siblings().find('a').removeClass('selectedMenu');
-    $('.aboutNav').removeClass('selectedMenu');
-    $('.portfolioNav').removeClass('selectedMenu');
-  },
-  offset: '50%'
-});
-}
+    if ($(this).scrollTop() > contactTop) {
+      $('.navItem').removeClass('selectedMenu');
+      $('.contactNav').addClass('selectedMenu');
+    
+    } else if ($(this).scrollTop() > portfolioTop) {;
+      $('.navItem').removeClass('selectedMenu');
+      $('.portfolioNav').addClass('selectedMenu');
+    
+    } else if ($(this).scrollTop() > aboutTop) {
+      $('.navItem').removeClass('selectedMenu');
+      $('.aboutNav').addClass('selectedMenu');
+    }
+  });
 
 //menu icon hamburger 
   $('#menuIcon').on('click', function() {

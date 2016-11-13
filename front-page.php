@@ -42,17 +42,13 @@
         <?php get_template_part('about'); ?>
       </div>
       </div>
-      
-      <div class="pageContent">
-      <div id="portfolio">
+      <div class="pageContent" id="portfolioSection">
         <?php get_template_part('portfolio'); ?>
       </div>
       </div>
       
-      <div class="pageContent">
-      <div id="contact">
+      <div class="pageContent" id="contactSection">
         <?php get_template_part('contact'); ?>
-      </div>
       </div>
      
     </section>

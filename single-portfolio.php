@@ -23,25 +23,29 @@
 				<div class="featuredImage"><?php $featuredImage = get_field('project_featured_image') ?></div>
 				<img src="<?php echo $featuredImage['url'] ?> " alt="<?php echo $featuredImage['alt'] ?> ">
 				<h2><?php the_field('project_name') ?></h2>
-				<?php  ?>
 				
 				<div class="description">
 					<?php the_field('project_long_description') ?>
 				</div>
 
+				<div class="mobileDescription">
+					<?php the_field('project_description_mobile') ?>
+				</div>
+				
+				<div class="links">
 				<?php if( get_field('has_live_site') )
 				{ ?>
 					<?php $link = get_field('live_site_link') ?>
+
+						<h3><a href="<?php echo $link?>" target="_blank">View Live</a><h3>
 				<?php } ?>
 
 				<?php if(get_field('on_github'))
 				{ ?>
 				<?php $github = get_field('github_link') ?>
-				<?php } ?>
 
-				<div class="links">
-					<h3><a href="<?php echo $link?>" target="_blank">View Live</a><h3>
-					<h3><a href="<?php echo $github ?>" target="_blank">View on Github</a></h3>
+				<h3><a href="<?php echo $github ?>" target="_blank">View on Github</a></h3>
+				<?php } ?>
 				</div>
 				
 				<div class="projectImageGrid">
@@ -54,6 +58,10 @@
 					
 					<?php endwhile; //end of the loop to get the images from the repeater field ?>
 					<?php wp_reset_postdata(); ?>
+				</div>
+				<div class="prevNext">
+					<h3><?php next_post_link('%link', 'Previous Project'); ?></h3>
+					<h3><?php previous_post_link('%link', 'Next Project'); ?></h3>
 				</div>
 
 		<?php endwhile; // end of the if / while posts at the top ?>
