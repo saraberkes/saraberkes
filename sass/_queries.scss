@@ -462,6 +462,31 @@
 				margin-bottom: 10px;
 			}
 	}
+
+	ul#menu-social {
+	margin-bottom: 15px;
+		
+		li {
+			margin-right: -5px;
+
+			a {
+				background: black;
+				color: white;
+				padding: 4px 9px;
+				font-size: 1.2rem;
+				border-radius: 50%;
+				transition: 0.2s;
+
+				&:hover, &:focus {
+					background: $yellow;
+					color: black;
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+
 } //end media query
 
 

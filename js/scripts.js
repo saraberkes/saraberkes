@@ -4,6 +4,12 @@ $(function(){
     speed: 200
   });
 
+  //scrollReveal for portfolio projects
+
+  window.sr = ScrollReveal({duration: 500, viewFactor: 0.3});
+  sr.reveal('.portfolioPiece');
+
+
 
 //waypoints for menu items (showing active state when scroll to particular section)
 

@@ -113,6 +113,14 @@ function hackeryou_scripts() {
   	null, //version number
   	true //load in footer
   );
+
+  wp_enqueue_script(
+  	'scrollreveal', //handle
+  	'https' . "://unpkg.com/scrollreveal@3.3.2/dist/scrollreveal.min.js",
+  	false, //dependencies
+  	null, //version number
+  	true //load in footer
+  );
 }
 
 add_action( 'wp_enqueue_scripts', 'hackeryou_scripts');
