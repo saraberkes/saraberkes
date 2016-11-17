@@ -14,8 +14,12 @@
 
 	.primaryMenu {
 		position: absolute;
-		top: 18vh;
+		top: 20vh;
 		left: -35%;
+
+		#menuIcon {
+			display: none;
+		}
 
 		.menufixed {
 			position: fixed;

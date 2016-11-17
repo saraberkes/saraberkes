@@ -40,8 +40,10 @@ $(window).on('scroll', function() {
   })
 
   $('#menu-primary-menu li').on('click', function(){
-    $('.menufixed').removeClass('showMenu');
-    $('#menuIcon').toggleClass('fa-times fa-bars');
+    if ($('.menufixed').hasClass('showMenu')) {
+      $('.menufixed').removeClass('showMenu');
+      $('#menuIcon').toggleClass('fa-times fa-bars');
+    }
   })
 
 
