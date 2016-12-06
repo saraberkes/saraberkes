@@ -86,8 +86,8 @@
 		
 		.projectImages {
 			flex: 1 0 280px;
-			height: 250px;
-			margin-bottom: 10px;
+			height: auto;
+			margin-bottom: 5px;
 
 			img {
 				height: 100%;
@@ -507,5 +507,21 @@
 		}
 	}
 } // end media query
+
+
+@media screen and (max-width:320px) {
+	.portfolioProject {
+		
+		.projectImages {
+			flex: 1 0 220px;
+			height: auto;
+			margin-bottom: 5px;
+
+			img {
+				height: 100%;
+			}
+			}
+		}
+}
 
 
