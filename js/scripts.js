@@ -6,7 +6,7 @@ $(function(){
 
   //scrollReveal for portfolio projects
 
-  window.sr = ScrollReveal({duration: 500, viewFactor: 0.3});
+  window.sr = ScrollReveal({duration: 300, viewFactor: 0.3});
   sr.reveal('.portfolioPiece');
 
 
