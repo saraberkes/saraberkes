@@ -513,12 +513,10 @@
 	.portfolioProject {
 		
 		.projectImages {
-			flex: 1 0 220px;
-			height: auto;
-			margin-bottom: 5px;
 
 			img {
-				height: 100%;
+				width: 100%;
+				height: auto;
 			}
 			}
 		}
